@@ -1,5 +1,7 @@
 # AWS key for the instances
-key_name = "~/.ssh/rancher-example"
+key_name = "rancher-example"
+key_path = "~/.ssh/rancher-example.pub"
+
 
 # RDS database password
 db_pass = "rancherdbpass"

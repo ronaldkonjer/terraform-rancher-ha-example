@@ -22,8 +22,11 @@ variable "ami" {
 }
 
 variable "key_name" {
-    default = "~/rancher-example"
-    description = "SSH key name in your AWS account for AWS instances"
+    description = "SSH key name in your AWS account for AWS instances."
+}
+
+variable "key_path" {
+    description = "Local path of the SSH private key"
 }
 
 variable "instance_type" {

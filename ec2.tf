@@ -5,7 +5,7 @@ resource "aws_instance" "rancher_ha" {
     count                       = "${var.count}"
     ami                         = "${var.ami}"
     instance_type               = "${var.instance_type}"
-    key_name                    = "${var.key_name}"
+    key_name                    = "${aws_key_pair.rancher.key_name}"
     user_data                   = "${data.template_file.install.rendered}"
     subnet_id                   = "${element(sort(aws_subnet.rancher_ha.*.id), count.index)}"
 
