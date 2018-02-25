@@ -2,7 +2,7 @@
 # AWS Environment Variables
 #------------------------------------------#
 variable "region" {
-    default     = "us-east-1"
+    default     = "eu-west-1"
     description = "The region of AWS, for AMI lookups"
 }
 
@@ -17,11 +17,12 @@ variable "name_prefix" {
 }
 
 variable "ami" {
-    default     = "ami-dfdff3c8"
+    default     = "ami-69187010"
     description = "Instance AMI ID"
 }
 
 variable "key_name" {
+    default = "~/rancher-example"
     description = "SSH key name in your AWS account for AWS instances"
 }
 
@@ -46,7 +47,7 @@ variable "subnet_cidrs" {
 }
 
 variable "availability_zones" {
-    default     = ["us-east-1a", "us-east-1b", "us-east-1d"]
+    default     = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
     description = "Availability zones to place subnets"
 }
 
@@ -76,7 +77,7 @@ variable "db_pass" {
 # SSL Variables
 #------------------------------------------#
 variable "enable_https" {
-    default     = false
+    default     = true
     description = "Enable HTTPS termination on the loadbalancer"
 }
 

@@ -16,6 +16,7 @@ resource "aws_rds_cluster" "rancher_ha" {
     master_username        = "${var.db_user}"
     master_password        = "${var.db_pass}"
     db_subnet_group_name   = "${aws_db_subnet_group.rancher_ha.name}"
+    skip_final_snapshot    =  "true"
     vpc_security_group_ids = ["${aws_security_group.rancher_ha_rds.id}"]
 }
 

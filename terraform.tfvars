@@ -1,5 +1,5 @@
 # AWS key for the instances
-key_name = "rancher-example"
+key_name = "~/rancher-example"
 
 # RDS database password
 db_pass = "rancherdbpass"
