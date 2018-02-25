@@ -8,3 +8,9 @@ output "elb_http_dns" {
 output "elb_https_dns" {
     value = "${aws_elb.rancher_ha_https.*.dns_name}"
 }
+
+output "instances" {
+    value = ["${aws_instance.rancher_ha.*.public_ip}"]
+}
+
+
